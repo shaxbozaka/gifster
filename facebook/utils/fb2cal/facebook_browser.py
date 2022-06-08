@@ -16,7 +16,6 @@ class FacebookBrowser:
 
     def authenticate(self, email, password):
         """ Authenticate with Facebook setting up session for further requests """
-        
         FACEBOOK_LOGIN_URL = 'http://www.facebook.com/login.php'
         FACEBOOK_DATR_TOKEN_REGEXP = r'\"_js_datr\",\"(.*?)\"'
         regexp = re.compile(FACEBOOK_DATR_TOKEN_REGEXP, re.MULTILINE)
