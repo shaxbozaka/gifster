@@ -1609,3 +1609,17 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 [2022-06-07 06:22:33,894] django.request WARNING (log_response) Not Found: /
 [2022-06-07 06:30:37,961] django.request WARNING (log_response) Not Found: /cgi-bin/ViewLog.asp
 [2022-06-07 06:42:03,484] django.request WARNING (log_response) Not Found: /upload/2022-04-27/94302162b57a4b5cb95e9fe43b98f9d4.png
+[2022-06-21 10:48:42,205] urllib3.connectionpool DEBUG (_new_conn) Starting new HTTP connection (1): www.facebook.com:80
+[2022-06-21 10:48:42,404] urllib3.connectionpool DEBUG (_make_request) http://www.facebook.com:80 "GET /login.php HTTP/1.1" 301 0
+[2022-06-21 10:48:42,405] urllib3.connectionpool DEBUG (_new_conn) Starting new HTTPS connection (1): www.facebook.com:443
+[2022-06-21 10:48:42,997] urllib3.connectionpool DEBUG (_make_request) https://www.facebook.com:443 "GET /login.php HTTP/1.1" 200 None
+[2022-06-21 10:48:43,225] urllib3.connectionpool DEBUG (_make_request) http://www.facebook.com:80 "GET /login.php HTTP/1.1" 301 0
+[2022-06-21 10:48:43,866] urllib3.connectionpool DEBUG (_make_request) https://www.facebook.com:443 "GET /login.php HTTP/1.1" 200 None
+[2022-06-21 10:48:47,800] urllib3.connectionpool DEBUG (_make_request) https://www.facebook.com:443 "POST /login/device-based/regular/login/?login_attempt=1&lwv=100 HTTP/1.1" 302 0
+[2022-06-21 10:48:48,011] urllib3.connectionpool DEBUG (_make_request) https://www.facebook.com:443 "GET / HTTP/1.1" 200 0
+[2022-06-21 10:48:48,762] urllib3.connectionpool DEBUG (_make_request) https://www.facebook.com:443 "GET /events/birthdays/ HTTP/1.1" 200 None
+[2022-06-21 10:48:50,646] urllib3.connectionpool DEBUG (_make_request) https://www.facebook.com:443 "POST /api/graphql/ HTTP/1.1" 200 None
+[2022-06-21 10:48:52,963] urllib3.connectionpool DEBUG (_make_request) https://www.facebook.com:443 "POST /api/graphql/ HTTP/1.1" 200 None
+[2022-06-21 10:48:54,150] urllib3.connectionpool DEBUG (_make_request) https://www.facebook.com:443 "POST /api/graphql/ HTTP/1.1" 200 None
+[2022-06-21 10:48:55,350] urllib3.connectionpool DEBUG (_make_request) https://www.facebook.com:443 "POST /api/graphql/ HTTP/1.1" 200 None
+[2022-06-21 11:00:44,982] django.utils.autoreload INFO (trigger_reload) /home/shaxbozaka/PycharmProjects/Giftster/Giftster/settings.py changed, reloading.
