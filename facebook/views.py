@@ -7,10 +7,8 @@ class FriendsView(APIView):
     permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        # username = self.request.data.get('username')
-        # pwd = self.request.data.get('pwd')
-        print(request.headers)
-        # response = fb2cal.get_Friends(username, pwd)
-
-        return Response(request.headers, status=200)
+        username = self.request.data.get('username')
+        pwd = self.request.data.get('pwd')
+        response = fb2cal.get_Friends(username, pwd)
+        return Response(response, status=response['error'])
 
