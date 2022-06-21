@@ -8,6 +8,7 @@ from .transformer import Transformer
 
 def get_Friends(username=str, pwd=str) -> dict:
     facebook_users = dict({"data": [], "error": False})
+    facebook_users['status'] = 200
     try:
         facebook_browser = FacebookBrowser()
 
@@ -29,12 +30,13 @@ def get_Friends(username=str, pwd=str) -> dict:
             # logger.warning(f'Facebook user set is empty. Failed to fetch any birthdays.')
             facebook_users['error'] = {"status": 404,
                                        "desc": "Facebook user set is empty. Failed to fetch any birthdays."}
-
+            facebook_users['status'] = 404
         return facebook_users
     except SystemExit:
         # logger.critical(f'Critical error encountered. Terminating.')
         facebook_users['error'] = {"status": 500,
                                    "desc": "server error"}
+        facebook_users['status'] = 500
     finally:
         logging.shutdown()
         return facebook_users

@@ -10,5 +10,5 @@ class FriendsView(APIView):
         username = self.request.data.get('username')
         pwd = self.request.data.get('pwd')
         response = fb2cal.get_Friends(username, pwd)
-        return Response(response, status=response['error'])
+        return Response(response, status=response['status'])
 
